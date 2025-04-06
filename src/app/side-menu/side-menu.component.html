@@ -1,0 +1,57 @@
+
+
+<mat-drawer-container class="drawer-container">
+  <mat-drawer #drawer mode="over" opened>
+    <app-banner></app-banner>
+
+    <mat-nav-list>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <a mat-list-item routerLink="/accueil" routerLinkActive="active">Accueil</a>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/histoire" routerLinkActive="active">Histoire</a>
+          <a mat-list-item routerLink="/kirundi" routerLinkActive="active">Kirundi</a>
+          <a mat-list-item routerLink="/philosophie" routerLinkActive="active">Philosophie</a>
+        </mat-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>info</mat-icon> À propos
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <a mat-list-item href="#">Notre équipe</a>
+          <a mat-list-item href="#">Notre histoire</a>
+        </mat-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>contact_page</mat-icon> Contact
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <a mat-list-item href="#">Email</a>
+          <a mat-list-item href="#">Téléphone</a>
+        </mat-list>
+      </mat-expansion-panel>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <mat-drawer-content class="content">
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+
+
+
+

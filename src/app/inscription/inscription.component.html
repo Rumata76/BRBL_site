@@ -1,0 +1,36 @@
+<div class="max-w-md mx-auto mt-10 p-6 border rounded-lg shadow-lg">
+  <h2 class="text-xl font-bold mb-4">Inscription au cours de Burundi Roots Belgium Life ASBL</h2>
+  <form [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()" class="space-y-4">
+    <select formControlName="course" class="input" required>
+      <option value="kahise">Kahise</option>
+      <option value="kirundi">Kirundi</option>
+      <option value="ubuntu">Ubuntu</option>
+    </select>
+    <select formControlName="level" class="input" required>
+      <option value="debutants">Débutants</option>
+      <option value="intermediaire">Intermédiaire</option>
+      <option value="avances">Avancés</option>
+    </select>
+    <select formControlName="type" class="input" required>
+      <option value="famille">Famille</option>
+      <option value="personnel">Personnel</option>
+    </select>
+    
+    <input formControlName="name" placeholder="Nom" class="input" required />
+    <input type="password" formControlName="password" placeholder="Mot de passe" class="input" required />
+    <input type="date" formControlName="birthdate" class="input" required />
+    <input formControlName="country" placeholder="Pays d'habitation" class="input" required />
+    <input formControlName="nationality" placeholder="Nationalité" class="input" required />
+    <input type="email" formControlName="email" placeholder="Email" class="input" required />
+    <input type="tel" formControlName="phone" placeholder="Numéro de téléphone" class="input" required />
+
+
+
+
+
+
+
+
+    <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded">S'inscrire</button>
+  </form>
+</div>

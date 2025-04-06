@@ -1,0 +1,66 @@
+
+<mat-toolbar  class="dark-toolbar">
+  <button mat-icon-button (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Menu</span>
+  <span class="flex-grow"></span>
+  <button mat-button (click)="goToInscription()">Login</button>
+</mat-toolbar>
+
+
+
+
+
+<mat-drawer-container class="drawer-container">
+  <mat-drawer #drawer mode="over" [(opened)]="isMenuOpen" class="retro-menu">
+    <app-banner></app-banner>
+
+    <mat-nav-list>
+      <mat-expansion-panel class="retro-panel">
+        <mat-expansion-panel-header class="retro-header">
+          <mat-panel-title>
+      <a mat-list-item routerLink="/accueil" routerLinkActive="retro-item-active" class="retro-item">🏠 Accueil</a>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <mat-divider></mat-divider>
+
+      <a mat-list-item routerLink="/histoire" routerLinkActive="active" class="retro-subitem">📜 Histoire</a>
+      <a mat-list-item routerLink="/kirundi" routerLinkActive="active" class="retro-subitem">🗣️ Kirundi</a>
+      <a mat-list-item routerLink="/philosophie" routerLinkActive="active" class="retro-subitem">💡 Philosophie</a>
+        </mat-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header class="retro-header">
+          <mat-panel-title>
+            <mat-icon>info</mat-icon> À propos de nous
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <a mat-list-item href="#" class="retro-subitem">Notre équipe</a>
+          <a mat-list-item href="#" class="retro-subitem">Notre histoire</a>
+        </mat-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header class="retro-header">
+          <mat-panel-title>
+            <mat-icon>contact_page</mat-icon> Contact
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <a mat-list-item href="#" class="retro-subitem">Email</a>
+          <a mat-list-item href="#" class="retro-subitem">Téléphone</a>
+        </mat-list>
+      </mat-expansion-panel>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <mat-drawer-content class="retro-content">
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<app-footer></app-footer>

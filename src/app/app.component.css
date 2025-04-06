@@ -1,0 +1,157 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+mat-icon {
+  font-family: 'Material Icons';
+  font-size: 24px;
+  vertical-align: middle;
+}
+.main-toolbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: 'Roboto', sans-serif;
+}
+.dark-toolbar {
+  background-color: black !important;
+  color: white !important;
+}
+/* ✅ Assurer que le `mat-toolbar` est bien positionné en haut */
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* S'assurer qu'il est au-dessus des autres éléments */
+}
+
+/* ✅ Supprimer toute opacité ou gris forcé */
+.mat-drawer-container,
+.mat-nav-list,
+.mat-list-item {
+  background-color: white !important;
+  color: #FFFFFF !important;  /* Blanc pur */
+  opacity: 1 !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: white !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dark-toolbar .mat-icon {
+  color: white !important;
+}
+.drawer-container {
+  margin-top: 64px;
+  height: calc(100vh - 64px);
+  width : 100vw;
+  display: flex;
+  flex-direction: row;
+}
+mat-drawer {
+  background-color: white !important;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+/* ✅ Appliquer rétro-vidéo au menu latéral */
+.retro-menu {
+  background-color: white !important;
+  color: black !important;
+  border-right: 2px solid white;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ✅ Forcer blanc pur sur les rubriques du menu */
+.retro-item,
+.retro-menu a,
+.mat-nav-list a {
+  color: black !important;  /* Blanc pur */
+  opacity: 1 !important;  /* Supprimer l'effet gris */
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  background-color: white !important;
+  text-decoration: none;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ✅ Changement de mode au survol */
+.retro-menu a:hover,
+.retro-item:hover {
+  background-color: white !important;
+  color: black !important;
+  transition: 0.3s;
+}
+
+/* ✅ Supprimer le style gris sur les liens actifs */
+.mat-nav-list a.router-link-active {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+}
+
+/* ✅ Appliquer rétro-vidéo à tout le contenu */
+.retro-content {
+  background-color: black !important;
+  color: white !important;
+  padding: 20px;
+  min-height: 100vh; /* S'assurer que ça couvre toute la page */
+  font-family: 'Roboto', sans-serif;
+  flex-grow: 1;
+  overflow: auto; /* Permet le scroll si nécessaire */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: calc(100% - 250px);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ✅ Appliquer rétro-vidéo aux titres et paragraphes */
+.retro-content h1,
+.retro-content h2,
+.retro-content h3,
+.retro-content p {
+  color: white !important;
+  opacity: 1 !important; /* Supprimer tout effet gris */
+}
+
+/* ✅ Changer l'effet au survol des liens */
+.retro-content a {
+  color: white !important;
+  text-decoration: underline;
+}
+
+.retro-content a:hover {
+  color: black !important;
+  background-color: white !important;
+}
+
+/* Le contenu principal prend tout l'espace restant */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background: black;
+  overflow: auto; /* Permet le scroll si nécessaire */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: calc(100% - 250px);
+  font-family: 'Roboto', sans-serif;
+}
+
+
