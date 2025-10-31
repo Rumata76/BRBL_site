@@ -1,0 +1,13 @@
+/* ✅ Ajouter un espace sous la barre de menu pour éviter que la bannière soit cachée */
+.banner {
+  margin-top: 64px; /* Ajuste en fonction de la hauteur du mat-toolbar */
+  width: 100%;
+  text-align: center;
+}
+
+/* ✅ Ajuster la taille de l’image de la bannière */
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
